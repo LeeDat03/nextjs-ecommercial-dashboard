@@ -1,6 +1,6 @@
 "use server";
 
-import db from "@/db";
+import db from "@/db/db";
 import { z } from "zod";
 import fs from "fs/promises";
 import { notFound, redirect } from "next/navigation";
