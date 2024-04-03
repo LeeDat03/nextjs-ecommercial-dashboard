@@ -13,7 +13,7 @@ datasource db {
 model Product {
   id                     String                 @id @default(uuid())
   name                   String
-  priceInCent            Int
+  priceInCents            Int
   filePath               String
   imagePath              String
   description            String
@@ -56,5 +56,6 @@ model DownloadVerification {
   expiresAt DateTime
   createdAt DateTime @default(now())
   productId String
+  
   product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
 }
